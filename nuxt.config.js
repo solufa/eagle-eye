@@ -15,6 +15,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  server: {
+    host: '0.0.0.0'
+  },
   /*
   ** Customize the progress-bar color
   */

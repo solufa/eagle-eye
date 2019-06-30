@@ -1,46 +1,18 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        eagle-eye
-      </h1>
-      <h2 class="subtitle">
-        My exceptional Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <div class="viewer-frame">
+        <iframe class="viewer" src="/viewer" scrolling="no" frameborder="0" />
       </div>
+      <h1 class="title">
+        8K-EAGLE EYE
+      </h1>
     </div>
   </div>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
+<style scoped>
 .container {
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -48,25 +20,34 @@ export default {
   text-align: center;
 }
 
+.container > div {
+  width: 960px;
+  max-width: 80%;
+  margin: 20px auto 0;
+}
+
+.viewer-frame {
+  position: relative;
+  padding-top: 75%;
+}
+
+.viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 80px;
   color: #35495e;
   letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  margin-top: 15px;
 }
 </style>
